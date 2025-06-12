@@ -50,6 +50,29 @@ Returns a list of available loan rates based on optional query parameters.
     ```sh
     dotnet run
     ```
-4.  The API will be running on a local port (e.g., `https://localhost:5000`).
-5.  Open your browser and navigate to `/swagger` on that URL (e.g., `https://localhost:5000/swagger`) to view the documentation.
+4.  The API will be running on a local port (e.g., `http://localhost:5000`).
+5.  Open your browser and navigate to `/swagger` on that URL (e.g., `http://localhost:5000/swagger`) to view the documentation.
 
+## Project Structure
+
+The project uses a standard, feature-oriented structure to separate concerns, making it clean and easy to maintain.
+
+```
+/RestAPI Practice
+│
+├── Properties/
+│   └── launchSettings.json   # Configures how the app starts in Development vs. Production.
+│
+├── Controllers/
+│   └── RatesController.cs      # Handles incoming HTTP requests and responses.
+│
+├── Models/
+│   └── Rate.cs                 # Defines the data structure for a loan rate.
+│
+├── Services/
+│   ├── IRateService.cs         # The interface (contract) for the Rate service.
+│   └── RateService.cs          # The concrete implementation of the service; contains business logic.
+│
+├── MinimalRatesApi.csproj      # The .NET project file; defines dependencies (e.g., Swagger).
+├── Program.cs                  # The main entry point of the application; configures services and middleware.
+└── README.md                   # This file.
