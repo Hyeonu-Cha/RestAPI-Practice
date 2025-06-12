@@ -8,8 +8,7 @@ namespace MinimalRatesApi.Services;
 /// </summary>
 public class RateService : IRateService
 {
-    // In a real application, this data would come from a database or another API.
-    // For this task, we are using a static list to provide mock data.
+    // Mock Data 
     private readonly List<Rate> _allRates = new()
     {
         new Rate { ProductName = "Fixed Rate Home Loan", LoanType = "Owner-Occupied", TermInYears = 30, InterestRate = 6.15 },
