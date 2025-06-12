@@ -4,3 +4,18 @@ O - Open/Closed Principle - Software entities (classes, modules, functions, etc.
 L - Liskov Substitution Principle - If you have a class that uses an interface, it should be able to work with any object that implements that interface without breaking.
 I - Interface Segregation Principle - It's better to have many small, specific interfaces than one big, general-purpose interface.
 D - Dependency Inversion Principle - High-level modules should not depend on low-level modules. Both should depend on abstractions (e.g., interfaces).
+
+Structure
+
+1. Controllers/RatesController
+  RatesController is Responsibile to handle web trafic
+
+2. Service
+ Calculation, get database. Not related to web
+
+3. Models
+ Data Definitions, Structure
+
+4. Program.cs
+ builder.Services.AddScoped<IRateService, RateService>();. 
+ This is Dependency Injection

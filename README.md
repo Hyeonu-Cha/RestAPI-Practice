@@ -50,7 +50,7 @@ Returns a list of available loan rates based on optional query parameters.
     ```sh
     dotnet run
     ```
-4.  The API will be running on a local port (e.g., `http://localhost:5000`).
+4.  The API will be running on a local port (e.g., `http://localhost:5000`). Nothing will be posted for this version.
 5.  Open your browser and navigate to `/swagger` on that URL (e.g., `http://localhost:5000/swagger`) to view the documentation.
 
 ## Project Structure
