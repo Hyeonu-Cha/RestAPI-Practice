@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 // --- Dependency Injection Setup ---
 // This tells the application how to create services. When a controller asks for an
 // IRateService, the system will provide it with an instance of RateService.
-// This is key for SOLID principles, making the code testable and flexible.
+
 builder.Services.AddScoped<IRateService, RateService>();
 
 // --- Add services to the container ---
